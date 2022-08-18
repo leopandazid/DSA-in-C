@@ -5,7 +5,8 @@ int main(){
     int *ptri= &a;
     printf("%d \n%d\n",a,*ptri); //10 10
     int **ptrp = &ptri;
-    printf("%d\n",**ptrp); //10
+    printf("%d\n",**ptrp); //10 
+    // same operation of what we do in linked list
     int ***ptr3= &ptrp;
     printf("%d\n",***ptr3); //10
 

@@ -10,7 +10,7 @@ Varanasi Problem
 */
 
 #include<stdio.h>
- 
+// tower of Hanoi
 void TOH(int n, char src,char aux,char dest){ // trace for n=3
     if(n==1){
         printf("Move %d from %c to %c", n, src, dest);
