@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"poly.h"
+#include"poly2.h"
 
 int main()
 {

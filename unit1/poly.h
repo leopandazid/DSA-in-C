@@ -8,6 +8,7 @@ typedef struct node
 typedef struct plist
 {
 	struct node *head;
+    
 }POLYNOMIAL;
 
 void initPolynomial(POLYNOMIAL *pl);

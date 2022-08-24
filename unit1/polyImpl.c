@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"poly.h"
+#include"poly2.h"
 
 void initPolynomial(POLYNOMIAL *pl)
 {
 	pl->head=NULL;
 }
-void insertLast(POLYNOMIAL *pl,int cf,int px)
+void insertLast(POLYNOMIAL *pl,int cf,int px) // without using last node
 {
 	NODE *newNode=malloc(sizeof(NODE));
 	newNode->coeff=cf;
@@ -26,6 +26,26 @@ void insertLast(POLYNOMIAL *pl,int cf,int px)
 		p->next=newNode;
 	}
 }
+
+void insertLastusingLastNode(POLYNOMIAL *p1,int cf, int px){
+    NODE* newNode = malloc (sizeof(NODE));
+    newNode->coeff=cf;
+	newNode->powx=px;
+	newNode->next=NULL;
+    if(p1->head==NULL)
+	{
+		p1->head=newNode;
+        p1->last = newNode;
+	}
+	else
+	{
+        p1->last->next= newNode;
+        p1->last = newNode;
+
+	}
+
+}
+
 void createPolynomial(POLYNOMIAL *pl)
 {
 	int choice;
@@ -43,7 +63,7 @@ void createPolynomial(POLYNOMIAL *pl)
 }
 int addPolynomial(POLYNOMIAL *pl1,POLYNOMIAL *pl2,POLYNOMIAL *pl3)
 {
-	NODE *p=pl1->head;
+	NODE *p=pl1->head; // for traversal
 	NODE *q=pl2->head;
 	
 	int cf,px;
