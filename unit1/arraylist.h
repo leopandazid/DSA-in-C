@@ -1,4 +1,4 @@
-#define MAX 10;
+#define MAX 10
 
 typedef struct ArrayList{
     int a[10];

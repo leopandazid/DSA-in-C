@@ -37,7 +37,17 @@ int main(){
             }
             break;
         case 2:
+            // scanf("%d",&ele);
+            status = deleteLast(&alst, &ele);
+            if(status ){
+                printf("Deleted %d successfully",ele);
+            }
+            else{
+                printf("List is empty");
+            }        
             break;
+        case 3:
+            display(&alst);
         
         default:
             break;
