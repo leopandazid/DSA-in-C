@@ -22,6 +22,16 @@ Node* newNode (int data){
     return temp;
 }
 
+int countNodes(Node *head){
+    if (head==NULL){
+        return 1;
+    }
+    else{
+        return 1+countNodes(head->next);
+    }
+    
+
+}
 void insertBegin(Node **head,int data){
     Node *nNode = newNode(data);
     if ((*head)==NULL){
@@ -65,6 +75,22 @@ int deleteLast(Node *head, int *num){
 
 }
 
+int deleteAtPos(Node **head, int *ele, int pos){
+    int n = countNodes(*head);
+    if (pos<0 || pos>=n){
+        return 0;
+    }
+    else if (pos==0){
+        return deleteFront(head,ele);
+    }
+    else{
+        
+    }
+}
+
+int deleteList(Node *head){
+
+}
 
 
 
