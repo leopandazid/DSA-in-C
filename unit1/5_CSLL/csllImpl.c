@@ -87,7 +87,7 @@ void destroyList(CSLL *pl)
 		{
 			pl->last->next=p->next;
 			free(p);
-			p=pl->last;
+			p=pl->last->next;
 		}
 		free(p);
 		pl->last=NULL;

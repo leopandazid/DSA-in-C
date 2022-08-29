@@ -192,7 +192,7 @@ int deleteAtPos(CDLL* pl,int *pele,int pos)
 	else
 	{
 		NODE *p=pl->head;
-		for(int i=0;i<pos;i++)
+		for(int i=1;i<pos;i++)
 			p=p->next;
 		
 		*pele=p->info;
