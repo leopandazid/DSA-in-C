@@ -1,5 +1,15 @@
 #include<stdio.h>
 
+/*
+order of precedence 
+
+1. Post increment / decrement - L to R - use and then change -- executed first but not incremented
+2. Pre increment/decrement - R to L - change and then use - it is faster
+3. derefrencing operator- R to L
+pre increment and derefrencing operator have same precedence
+
+*/
+
 int main()
 {
 	int a[]={10,20,30};

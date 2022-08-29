@@ -34,8 +34,8 @@ int main()
 //	ptr3=ptr2;	//Error
 }
 
-int const *ptr;		//ptr is pointing to const int
-const int *ptr;		//ptr is pointing to const int
-int *const ptr;		//ptr is a const pointer to an int
-int const *const ptr; //ptr is a const pointer to a const int
-const int *const ptr; //ptr is a const pointer to a const int
+// int const *ptr;		//ptr is pointing to const int
+// const int *ptr;		//ptr is pointing to const int
+// int *const ptr;		//ptr is a const pointer to an int
+// int const *const ptr; //ptr is a const pointer to a const int
+// const int *const ptr; //ptr is a const pointer to a const int
