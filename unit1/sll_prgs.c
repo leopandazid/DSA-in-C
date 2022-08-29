@@ -16,6 +16,9 @@ void concat (Node **head1, Node **head2){
         (*head1) = (*head2);
         return;
     }
+    else if (*head2==NULL){
+        return;
+    }
     while (temp->next!=NULL){
         temp=temp->next; // get the last node
     }

@@ -190,7 +190,7 @@ int deleteAtPos(DLIST *pl,int *pele,int pos)
 	{
 		NODE *p=pl->head;
 		for(int i=0;i<pos;i++)
-			p=p->next;
+			p=p->next; // p will be at current pos
 		
 		*pele=p->info;
 		p->prev->next=p->next;

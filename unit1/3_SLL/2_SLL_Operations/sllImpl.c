@@ -142,6 +142,9 @@ int deleteLast(LLIST *pl)
 
 int countNodes(LLIST *pl)
 {
+	/*
+	Think of hare and tortoise algo to find count nodes
+	*/
 	NODE *p=pl->head;
 	int count=0;
 	
@@ -185,7 +188,7 @@ int insertAtPos(LLIST *pl,int ele,int pos)
 }
 int deleteAtPos(LLIST *pl,int *pele,int pos)
 {
-	int n=countNodes(pl);
+	int n=countNodes(pl); // not efficient
 	
 	NODE *q=NULL,*p=pl->head;
 	
@@ -199,8 +202,8 @@ int deleteAtPos(LLIST *pl,int *pele,int pos)
 	{
 		for(int i=0;i<pos;i++)
 		{
-			q=p;
-			p=p->next;
+			q=p;// prev
+			p=p->next; //next ptr
 		}
 		*pele=p->info;
 		q->next=p->next;

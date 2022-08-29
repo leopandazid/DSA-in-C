@@ -25,7 +25,7 @@ int main()
 	printData(n,s);
 }
 
-void readData(int n,STUDENT *s)	//void readData(int n,STUDENT s[])
+void readData(int n,STUDENT s[])	//void readData(int n,STUDENT s[]) // both make changes in main
 {
 	for(int i=0;i<n;i++)
 		scanf("%d %s",&s[i].rNo,s[i].name);

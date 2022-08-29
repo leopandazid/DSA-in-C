@@ -6,6 +6,7 @@ void initPolynomial(POLYNOMIAL *pl)
 {
 	pl->head=NULL;
 	pl->last=NULL;
+	// last ptr to make insert last and delete last as constant time operations
 }
 void insertLast(POLYNOMIAL *pl,int cf,int px)
 {
