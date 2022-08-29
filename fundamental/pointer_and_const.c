@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     // now we cannot change this value now because of const pointer
     printf("%d %d\n",a,*ptr2);
 
-    int b=20;
+    b=20;
     ptr= &b;
     printf("%d %d\n",b,*ptr); 
 

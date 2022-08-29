@@ -17,13 +17,13 @@ int main(int argc, char const *argv[])
     printf("%d %d %d \n",a[0],a[1],a[2]);
     printf("%d %d %d \n",*(ptr+0), *(ptr+1),*(ptr+2));
 
-    int b= *ptr++;
+    int b= *ptr++;// works like b= *ptr; and then ptr=ptr+1;
     printf("%d %d \n",b,*ptr);
 
     int c= *(++ptr); // works like ptr=ptr+1; and then c= *ptr;
     printf("%d %d \n",c,*(ptr));
 
-    int e= *++ptr; // works like ptr=ptr+1; and then c= *ptr;
+    int e= *++ptr; // works like ptr=ptr+1; and then e= *ptr;
     printf("%d %d \n",e,*ptr);
 
     int d= *(ptr++); // works like d= *ptr; and then ptr= ptr+1;
@@ -31,9 +31,10 @@ int main(int argc, char const *argv[])
 
     ptr=a;
     int f= ++*ptr; // first pointer is derefrenced and then increment the memory location of the ptr
-    printf("%d %d \n",e,*ptr); // 11 11
     // *ptr= *ptr+1;
     // e= *ptr;
+    printf("%d %d \n",e,*ptr); // 11 11
+    
     // this is not valid
     // printf("%d \n",++10);
 
