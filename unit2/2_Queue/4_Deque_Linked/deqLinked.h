@@ -1,9 +1,12 @@
+// double ended queue
+
 typedef struct node
 {
 	struct node *prev;
 	int data;
 	struct node *next;
 }NODE;
+
 
 typedef struct queue
 {
