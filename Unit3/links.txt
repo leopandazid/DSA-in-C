@@ -1,0 +1,53 @@
+Binary Search tree
+https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/
+https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
+https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/?ref=lbp
+
+Inorder, Preorder and Postorder Iterative Approach in BST
+
+https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/?ref=lbp
+https://www.geeksforgeeks.org/iterative-preorder-traversal/?ref=lbp
+https://www.geeksforgeeks.org/iterative-postorder-traversal/?ref=lbp
+https://www.geeksforgeeks.org/level-order-tree-traversal/?ref=lbp
+
+
+Recursive Logics -
+
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/?ref=lbp
+https://www.geeksforgeeks.org/pre-order-post-order-and-in-order-traversal-of-a-binary-tree-in-one-traversal-using-recursion/?ref=rp 
+
+Array Implementation of BST
+
+https://www.geeksforgeeks.org/binary-tree-array-implementation/?ref=lbp
+
+insertion and Deletion
+
+https://www.geeksforgeeks.org/insertion-in-a-binary-tree-in-level-order/?ref=lbp
+https://www.geeksforgeeks.org/deletion-binary-tree/?ref=lbp
+
+Heap
+https://www.geeksforgeeks.org/heap-data-structure/?ref=shm
+https://www.geeksforgeeks.org/binary-heap/  
+https://www.geeksforgeeks.org/array-representation-of-binary-heap/?ref=lbp
+
+Priority Queue
+
+https://www.geeksforgeeks.org/priority-queue-set-1-introduction/?ref=gcse
+https://www.geeksforgeeks.org/priority-queue-using-binary-heap/
+
+Expression tree
+https://www.geeksforgeeks.org/expression-tree/?ref=gcse
+https://www.geeksforgeeks.org/evaluation-of-expression-tree/
+
+N-ary tree to Binary Tree
+
+https://www.geeksforgeeks.org/generic-treesn-array-trees/
+https://www.geeksforgeeks.org/convert-a-generic-treen-array-tree-to-binary-tree/?ref=gcse
+
+traversal Of N-ary tree
+
+https://www.geeksforgeeks.org/inorder-traversal-of-an-n-ary-tree/?ref=gcse
+https://www.geeksforgeeks.org/iterative-preorder-traversal-of-a-n-ary-tree/?ref=gcse
+https://www.geeksforgeeks.org/preorder-traversal-of-n-ary-tree-without-recursion/?ref=gcse
+https://www.geeksforgeeks.org/iterative-postorder-traversal-of-n-ary-tree/?ref=gcse
+https://www.geeksforgeeks.org/level-order-traversal-of-n-ary-tree/?ref=gcse
