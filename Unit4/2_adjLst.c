@@ -1,3 +1,4 @@
+// adjancency list
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 10
@@ -36,6 +37,7 @@ void addEdge(NODE *V[MAX],int src,int dest)
 {
 	NODE *newNode=malloc(sizeof(newNode));
 	
+	// insertion at head
 	newNode->info=dest;
 	newNode->next=V[src];
 	V[src]=newNode;

@@ -1,0 +1,236 @@
+// Create an ordered singly linked list in C
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {
+    int data;
+    struct node *next;
+};
+
+struct node *head = NULL;
+struct node *current = NULL;
+
+//display the list
+void printList() {
+    struct node *ptr = head;
+    printf("
+[head] =>");
+    //start from the beginning
+    while(ptr != NULL) {
+        printf(" %d =>",ptr->data);
+        ptr = ptr->next;
+    }
+
+    printf(" [null]
+");
+}
+
+//insert link at the first location
+void insertFirst(int data) {
+    //create a link
+    struct node *link = (struct node*) malloc(sizeof(struct node));
+
+    link->data = data;
+    link->next = head;
+
+    head = link;
+}
+
+//delete first item
+struct node* deleteFirst() {
+
+    //save reference to first link
+    struct node *tempLink = head;
+
+    //mark next to first link as first
+    head = head->next;
+
+    //return the deleted link
+    return tempLink;
+}
+
+//is list empty
+int isEmpty() {
+    return head == NULL;
+}
+
+int length() {
+    int length = 0;
+    struct node *current;
+
+    for(current = head; current != NULL; current = current->next) {
+        length++;
+    }
+
+    return length;
+}
+
+//find a link with given key
+
+struct node* find(int data) {
+
+    //start from the first link
+    struct node* current = head;
+
+    //if list is empty
+    if(head == NULL) {
+        return NULL;
+    }
+
+    //navigate through list
+    while(current->data != data) {
+
+        //if it is last node
+        if(current->next == NULL) {
+            return NULL;
+        } else {
+            //go to next link
+            current = current->next;
+        }
+    }
+
+    //if data found, return the current Link
+    return current;
+}
+
+//delete a link with given key
+struct node* delete(int data) {
+
+    //start from the first link
+    struct node* current = head;
+    struct node* previous = NULL;
+
+    //if list is empty
+    if(head == NULL) {
+        return NULL;
+    }
+
+    //navigate through list
+    while(current->data != data) {
+
+        //if it is last node
+        if(current->next == NULL) {
+            return NULL;
+        } else {
+            //store reference to current link
+            previous = current;
+            //move to next link
+            current = current->next;
+        }
+
+    }
+
+    //found a match, update the link
+    if(current == head) {
+        //change first to point to next link
+        head = head->next;
+    } else {
+        //bypass the current link
+        previous->next = current->next;
+    }
+
+    return current;
+}
+
+void sort() {
+
+    int i, j, k, tempData;
+    struct node *current;
+    struct node *next;
+
+    int size = length();
+    k = size ;
+
+    for ( i = 0 ; i < size - 1 ; i++, k-- ) {
+        current = head;
+        next = head->next;
+
+        for ( j = 1 ; j < k ; j++ ) {
+
+            if ( current->data > next->data ) {
+                tempData = current->data;
+                current->data = next->data;
+                next->data = tempData;
+            }
+
+            current = current->next;
+            next = next->next;
+        }
+    }
+}
+
+int main() {
+    insertFirst(10);
+    insertFirst(20);
+    insertFirst(30);
+    insertFirst(1);
+    insertFirst(40);
+    insertFirst(56);
+
+    printf("Original List: ");
+
+    //print list
+    printList();
+
+    while(!isEmpty()) {
+        struct node *temp = deleteFirst();
+        printf("Deleted value:");
+        printf("(%d) ",temp->data);
+    }
+
+    printf("List after deleting all items: ");
+    printList();
+    insertFirst(10);
+    insertFirst(20);
+    insertFirst(30);
+    insertFirst(1);
+    insertFirst(40);
+    insertFirst(56);
+    printf("Restored List: ");
+    printList();
+    struct node *foundLink = find(4);
+
+    if(foundLink != NULL) {
+        printf("Element found: ");
+        printf("(%d) ",foundLink->data);
+        printf("
+");
+    } else {
+        printf("Element not found.
+"); 
+    }
+
+    printf("List after deleting an item: ");
+    delete(4);
+    printList();
+
+    sort();
+
+    printf("List after sorting the data: ");
+    printList();
+
+    return 0;
+}
+
+Output
+
+Original List:
+[head] => 56 => 40 => 1 => 30 => 20 => 10 => [null]
+Deleted value:(56) Deleted value:(40) Deleted value:(1) Deleted value:(30) Deleted value:(20) Deleted value:(10) List after deleting all items: [head] => [null]
+Restored List:
+[head] => 56 => 40 => 1 => 30 => 20 => 10 => [null]
+Element not found.
+List after deleting an item:
+[head] => 56 => 40 => 1 => 30 => 20 => 10 => [null]
+List after sorting the data:
+[head] => 1 => 10 => 20 => 30 => 40 => 56 => [null]
+
+In this tutorial, we will learn how to create a singly linked list in C. 
+A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. 
+The elements in a linked list are linked using pointers. A linked list is a dynamic data structure, which can grow 
+and shrink at runtime. In this tutorial, we will learn how to create a singly linked list in C. A linked list is a 
+linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked 
+list are linked using pointers. A linked list is a dynamic data structure, which can grow and shrink at runtime.
+
+

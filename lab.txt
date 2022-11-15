@@ -1,0 +1,64 @@
+
+// C program to display the words in a trie in lexicographical Order
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define ALPHABET_SIZE 26
+
+struct TrieNode {
+    struct TrieNode* children[ALPHABET_SIZE];
+    int isEndOfWord;
+};
+
+struct TrieNode* getNewNode() {
+    struct TrieNode* newNode = (struct TrieNode*)malloc(sizeof(struct TrieNode));
+    newNode->isEndOfWord = 0;
+    for (int i = 0; i < ALPHABET_SIZE; i++) {
+        newNode->children[i] = NULL;
+    }
+    return newNode;
+}
+
+void insert(struct TrieNode* root, char* word) {
+    struct TrieNode* current = root;
+    for (int i = 0; i < strlen(word); i++) {
+        int index = word[i] - 'a';
+        if (current->children[index] == NULL) {
+            current->children[index] = getNewNode();
+        }
+        current = current->children[index];
+    }
+    current->isEndOfWord = 1;
+}
+
+void display(struct TrieNode* root, char str[], int level) {
+    if (root->isEndOfWord) {
+        str[level] = '\0';
+        printf("%s", str);
+
+    }
+    for (int i = 0; i < ALPHABET_SIZE; i++) {
+        if (root->children[i] != NULL) {
+            str[level] = i + 'a';
+            display(root->children[i], str, level + 1);
+        }
+    }
+}
+
+int main() {
+    struct TrieNode* root = getNewNode();
+    insert(root, "hello");
+    insert(root, "dog");
+    insert(root, "hell");
+    insert(root, "cat");
+    insert(root, "a");
+    insert(root, "hel");
+    insert(root, "help");
+    insert(root, "helps");
+    insert(root, "helping");
+    char str[20];
+    display(root, str, 0);
+}
+
